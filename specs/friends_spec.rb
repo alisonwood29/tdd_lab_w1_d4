@@ -77,14 +77,20 @@ class TestFriends < MiniTest::Test
     assert_equal("Friends", result)
   end
 
-
   # 3. For a given person, check if they like a particular food
   # (e.g. function should return true for @person3 when checked for "stew", false for "spinach")
-
-
+  def test_getting_favourite_food
+    result = favourite_food(@person3, "stew")
+    assert_equal(true, result)
+    result2 = favourite_food(@person3, "spinach")
+    assert_equal(false, result2)
+  end
   # 4. For a given person, add a new name to their list of friends
   # (hint: Add a new string to the friends array, then test for the length of the array, not the return value of your add_friend method)
-
+  def test_add_new_friend_name
+    result = new_friend_name(@person2, "Alison")
+    assert_equal(2, result)
+  end
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
