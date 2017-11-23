@@ -20,3 +20,8 @@ def new_friend_name(person, new_friend)
   person[:friends].push(new_friend)
   p person[:friends].length
 end
+
+def removed_friend(person, exfriend)
+    person[:friends].delete(exfriend)
+    p person[:friends].length
+end
