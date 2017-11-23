@@ -72,6 +72,10 @@ class TestFriends < MiniTest::Test
 
   # 2. For a given person, return their favourite tv show
   # (e.g. for @person2, function should return the string "Baywatch")
+  def test_getting_favourite_show
+    result = favourite_show(@person1)
+    assert_equal("Friends", result)
+  end
 
 
   # 3. For a given person, check if they like a particular food
